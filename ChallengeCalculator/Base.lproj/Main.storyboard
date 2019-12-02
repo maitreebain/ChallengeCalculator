@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChallengeCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-yN-ZGs">
+                                <rect key="frame" x="131.5" y="84" width="151" height="32"/>
+                                <segments>
+                                    <segment title="Elevation"/>
+                                    <segment title="Distance"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OqB-8O-qf0"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter metric (e.g elevation, distance challenge)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RUg-pb-RXl">
+                                <rect key="frame" x="20" y="135" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter number of weeks for challenge" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSj-z6-Grt">
+                                <rect key="frame" x="20" y="218" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metric (elevation, distance)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-23-p0E">
+                                <rect key="frame" x="20" y="177" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of weeks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGc-00-Oru">
+                                <rect key="frame" x="20" y="260" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMp-7c-EZM">
+                                <rect key="frame" x="138.5" y="321" width="137" height="30"/>
+                                <state key="normal" title="Calculate Challenge"/>
+                                <connections>
+                                    <action selector="calculateChallengePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="umi-Ns-d7A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average metric for the week: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-6s-GtI">
+                                <rect key="frame" x="20" y="437.5" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RUg-pb-RXl" firstAttribute="top" secondItem="r3f-yN-ZGs" secondAttribute="bottom" constant="20" id="2PQ-pW-q4a"/>
+                            <constraint firstItem="CMp-7c-EZM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5bA-m3-lkr"/>
+                            <constraint firstItem="r3f-yN-ZGs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="CMc-4z-XWt"/>
+                            <constraint firstItem="r3f-yN-ZGs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ccg-Od-ZXx"/>
+                            <constraint firstItem="LGc-00-Oru" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="J0k-rj-6MX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LGc-00-Oru" secondAttribute="trailing" constant="20" id="Kuu-qr-S54"/>
+                            <constraint firstItem="LGc-00-Oru" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MWq-2c-UuC"/>
+                            <constraint firstItem="CMp-7c-EZM" firstAttribute="top" secondItem="LGc-00-Oru" secondAttribute="bottom" constant="40" id="Pru-4O-Mxq"/>
+                            <constraint firstItem="LGc-00-Oru" firstAttribute="top" secondItem="tSj-z6-Grt" secondAttribute="bottom" constant="8" id="Vdh-V6-p6I"/>
+                            <constraint firstItem="tSj-z6-Grt" firstAttribute="top" secondItem="0cI-23-p0E" secondAttribute="bottom" constant="20" id="Vyz-Hv-LVK"/>
+                            <constraint firstItem="tSj-z6-Grt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ws4-gP-6jH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eo8-6s-GtI" secondAttribute="trailing" constant="20" id="XSq-30-PC1"/>
+                            <constraint firstItem="RUg-pb-RXl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bHq-oB-l2e"/>
+                            <constraint firstItem="0cI-23-p0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cN4-f0-nQK"/>
+                            <constraint firstItem="0cI-23-p0E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d4h-Lr-Jlo"/>
+                            <constraint firstItem="Eo8-6s-GtI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gcT-Tt-Y6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tSj-z6-Grt" secondAttribute="trailing" constant="20" id="h0y-oK-FnU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0cI-23-p0E" secondAttribute="trailing" constant="20" id="iLT-rg-HbH"/>
+                            <constraint firstItem="0cI-23-p0E" firstAttribute="top" secondItem="RUg-pb-RXl" secondAttribute="bottom" constant="8" id="ic5-fW-LII"/>
+                            <constraint firstItem="tSj-z6-Grt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k5W-2f-4gc"/>
+                            <constraint firstItem="Eo8-6s-GtI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmJ-xb-03i"/>
+                            <constraint firstItem="Eo8-6s-GtI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w0q-zL-PGQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RUg-pb-RXl" secondAttribute="trailing" constant="20" id="xIH-Ra-sYv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Eo8-6s-GtI" id="stu-UX-4X9"/>
+                        <outlet property="metricTextField" destination="RUg-pb-RXl" id="Qhi-dm-iqp"/>
+                        <outlet property="segmentedControl" destination="r3f-yN-ZGs" id="S19-73-hjw"/>
+                        <outlet property="weeksTextField" destination="tSj-z6-Grt" id="Lxh-re-e2a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
